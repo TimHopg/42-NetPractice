@@ -28,7 +28,7 @@ The address `255` (in a subnet range divisible by 8) is always reserved for the 
 
 For the IP address `192.168.1.0/24` where `/24` represents 24 bits of masking i.e. `255.255.255.0` or `1111 1111 1111 0000`:
 
-- The broadcast address would be `192.168.1.255`
+- The broadcast address would be `192.168.1.255` (dotted decimal notation)
 - The network address would be `192.168.1.0`
 
 With a subnet mask of `/31` only 1 bit is available for the host portion of the address so broadcast and network addresses are redundant and not used. A subnet of `/31` is typically used for point-to-point links of two devices communicating directly with eachother.
@@ -60,6 +60,8 @@ With a subnet mask of `/31` only 1 bit is available for the host portion of the 
 |255.192.0.0| /10| 11111111.11000000.00000000.00000000| 10| 22| 4194304|
 |255.128.0.0| /9| 11111111.10000000.00000000.00000000|  9| 23| 8388608|
 |255.0.0.0|     /8| 11111111.00000000.00000000.00000000| 8| 24| 16777216|
+
+\* _The inverse of a subnet mask is known as a CISCO wildcard mask and indicates which part of the IP address are available for exmaination_
 
 ### Private IP Address ranges
 
@@ -286,9 +288,9 @@ obase=2 # out base is 2 (binary)
 
 ## References
 
+- [Boson - NetSim](http://netsim.boson.com) - Build your own virtual network
 - [techtarget.com](https://www.techtarget.com/searchnetworking/tip/IP-addressing-and-subnetting-Calculate-a-subnet-mask-using-the-hosts-formula) - How to calculate a subnet mask from hosts and subnets
 - [softwaretestinghelp.com](https://www.softwaretestinghelp.com/subnet-mask-and-network-classes/) - Guide to Subnet Mask (Subnetting) & IP Subnet Calculator
-
 - [avinetworks.com](https://avinetworks.com/glossary/subnet-mask/) - Glossary Subnet mask
 - [packetcoders.io](https://www.packetcoders.io/a-beginners-guide-to-subnetting/) - A Beginners Guide to Subnetting
 
