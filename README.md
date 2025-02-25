@@ -293,7 +293,3 @@ obase=2 # out base is 2 (binary)
 - [softwaretestinghelp.com](https://www.softwaretestinghelp.com/subnet-mask-and-network-classes/) - Guide to Subnet Mask (Subnetting) & IP Subnet Calculator
 - [avinetworks.com](https://avinetworks.com/glossary/subnet-mask/) - Glossary Subnet mask
 - [packetcoders.io](https://www.packetcoders.io/a-beginners-guide-to-subnetting/) - A Beginners Guide to Subnetting
-
-## License
-
-Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
