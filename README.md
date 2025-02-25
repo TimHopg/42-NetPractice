@@ -1,4 +1,8 @@
-# net_practice_readme
+# NetPractice
+
+A 42 School Lisboa project to learn the basics of TCP/IP networks.
+
+![netpractice_grade](./NetPractice_grade.png)
 
 ## IP Address
 
@@ -147,12 +151,12 @@ So if your network is `255.255.255.0` you can use the last byte (8 bits) to crea
 And each of those networks has how many available hosts? Answer: `64`. In a network `255.255.255.192` i.e. `1111 1111.1111 1111.1111 1111.1100 0000`, the last bit (the 26th bit) is at the `2 ^6` position.
 
 ```plaintext
- 1   1   0   0   0   0   0   0
-2^7 2^6 2^5 2^4 2^3 2^2 2^1 2^0
-128  64  32  16  8   4   2   1
+ 1    1    0    0    0    0    0    0
+2^7  2^6  2^5  2^4  2^3  2^2  2^1  2^0
+128   64   32   16   8    4    2    1
 ```
 
-For a host to act as a router, it can take default traffic (destinations that are not explicitly listed in the routing table) and redirect them to the interface IP address that communicates with the router. `default` is shorthand for `0.0.0.0/0` i.e. matches any IP address.
+For a host to act as a router, it can take default traffic (destinations that are not explicitly listed in the routing table) and redirect them to the interface IP address (gateway) that communicates with the router. `default` is shorthand for `0.0.0.0/0` i.e. matches any IP address.
 
 ### Q1
 
@@ -160,7 +164,7 @@ For a host to act as a router, it can take default traffic (destinations that ar
 
 ### Q2
 
-- IP addresses B1 & D1 and A1 & C1 can be the same. `127.x.x.x` is loopback.
+- IP addresses B1 & D1 and A1 & C1 can be the same. `127.x.x.x` is loopback (and should not be used).
 
 ### Q3
 
@@ -201,15 +205,15 @@ For a host to act as a router, it can take default traffic (destinations that ar
 +------+                +-----------+
 ```
 
-If each part of the network is not on a separate subnet, they might think they can send data directly to an address on their own local network and not pass it on to the router instead.
+If each part of the network is not on a separate subnet, they would think they can send data directly to an address on their own local network and not pass it on to the router instead.
 
 #### Q7 Process
 
-- All masks can be `/30` (because only two IPs are needed)
+- All masks can be `/30` (because only two IPs are needed). `/30` leaves four bit combinations available, the first is reserved for the network address and the last is reserved for broadcast.
 - R21 & R12 IP should be similar
 - A1 and R11 IPs should be similar
 - Host A gateway should match R11 gateway.
-- All destinations can be `default`
+- All destinations can be `default` since there is only one routing option.
 - R1 gateway should match R21
 - R2 gateway should match R12
 - R22 and C1 IPs should be a different subnet
@@ -243,7 +247,7 @@ If a host attempts to send a data packet to an address it doesn't recognise, def
 - C route gateway should match R22 IP
 - Defaults on all other routing tables
 
-#### Q9
+### Q9
 
 - Match masks
 - R23 IP can match host D route gateway
@@ -251,8 +255,6 @@ If a host attempts to send a data packet to an address it doesn't recognise, def
 - D1 IP can be similar to R23
 
 ### Q10
-
-#### Q10 Process
 
 - Masks in top right local network must match.
 - H21 IP should be similar to R11 and H11 IPs +/- 1.
