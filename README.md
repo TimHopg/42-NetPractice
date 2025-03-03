@@ -146,6 +146,11 @@ Transmission Control Protocol/Internet Protocol. A set of rules that guide and a
 
 ## Net Practice Questions
 
+Edit the CSS files to resize the log part of the window.  
+In order to use Firefox to do the exercises, you might need to change a setting in `about:config`.
+If `security.fileuri.strict_origin_policy` is set to `true`, change it to `false`.
+
+
 _The trick is that when you need more networks (subnetworks), you must hack the host bits._
 
 So if your network is `255.255.255.0` you can use the last byte (8 bits) to create subnets. If you need four additional networks, how many additional bits would create four? Answer: two bits. In two bits we can express `00` `01` `10` `11` 4 permutations.
